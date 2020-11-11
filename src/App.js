@@ -1,25 +1,26 @@
-import logo from './logo.svg';
+
+import Board from './Board.js';
 import './App.css';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Board />
     </div>
-  );
+
+  )
+
 }
 
 export default App;
+
+//structure of Components: 
+// kanbanApp - Board (contains all the individual boards)
+  // - personalBoard - Column// list (individual board)
+    //- ownerName  - Name (header of the board with owner's name)
+    //- taskCard - Card(individual task)
+      // - moveCard (moves card to next column)
+    //- addCardButton - AddCard (button that adds the card)
+
