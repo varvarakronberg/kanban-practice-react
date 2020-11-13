@@ -1,7 +1,11 @@
 
 
-const Card = () => {
-    return (<div> card </div>)
+const Card = props => {
+    return (
+        <li className="card">
+            {props.text}
+        </li>
+    )
 
 };
 

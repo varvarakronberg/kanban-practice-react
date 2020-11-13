@@ -1,15 +1,17 @@
 import Card from './Card.js';
-const Column = () => {
+const Column = props => {
+    const { name, cards } = props;
     return (
-        <div>
-            <header>
-                NAME
-            </header>
-            <div>
-                <Card />
-                <Card />
-            </div>
-        </div>
+        <li className="column">
+            <h2 className="name">{name}</h2>
+
+
+            <ul className="tasksList">
+                {cards.map(({ cardText }) => { return <Card text={cardText} /> })
+                }
+
+            </ul>
+        </li>
     )
 };
 
