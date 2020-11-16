@@ -48,10 +48,11 @@ const Board = () => {
 
     return (
         <div className="board">
-            {tasks.map(({ name, cards }) => {
+            {tasks.map(({ name, id, cards }) => {
                 return <Column
                     name={name}
                     cards={cards}
+                    id={id}
                 />
             })}
         </div>
